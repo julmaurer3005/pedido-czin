@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Estilos responsivos */
+        @media only screen and (max-width: 600px) {
+            header, section, footer {
+                padding: 10px;
+            }
+        }
+        /* Estilos para os botões */
+        button {
+        height: 50px;
+        width: 100px;
+        background: white;
+        border-radius: 5px;
+        color: blue;
+        font-weight: 800;
+        font-size: 30px;
+        
+    }
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .box {
+        font-size: 50px;
+        color: white;
+        height: 650px;
+        width: 1400px;
+        border-radius: 10px;
+        background: #191919;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: space-around;
+        height: 100px;
+        width: 200px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p> Cuzinho Hoje?</p>
+        <div class="buttons-container">
+            <button>
+                <a href="https://abre.ai/jis9">SIM</a>
+            </button>
+            <button id="no">NÃO</button>
+        </div>    
+        
+    </div>
+    
+    
+</body>
+<script>
+    let button = document.getElementById('no');
+    let height = window.innerHeight - 50;
+    let width = window.innerWidth - 50;
+
+    button.addEventListener('mouseover', function() {
+        button.style.position = "absolute";
+        button.style.top = Math.random() * height + "px";
+        button.style.left = Math.random() * width + "px";
+    } )
+
+</script>
+</html>
